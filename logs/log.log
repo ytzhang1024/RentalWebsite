@@ -1,0 +1,116 @@
+2023-04-05 14:46:04.040  INFO 21480 --- [restartedMain] com.yutian.zhang.rental.Application      : Starting Application on LAPTOP-TMIHG37B with PID 21480 (started by TimZhang in D:\Development\Java\items\Rental Website)
+2023-04-05 14:46:04.048  INFO 21480 --- [restartedMain] com.yutian.zhang.rental.Application      : No active profile set, falling back to default profiles: default
+2023-04-05 14:46:04.125  INFO 21480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-05 14:46:04.125  INFO 21480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-05 14:46:05.853  INFO 21480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-04-05 14:46:05.878  INFO 21480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 14:46:05.878  INFO 21480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2023-04-05 14:46:06.159  INFO 21480 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-04-05 14:46:06.164  INFO 21480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 14:46:06.164  INFO 21480 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2039 ms
+2023-04-05 14:46:06.394  INFO 21480 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-04-05 14:46:06.624  INFO 21480 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-04-05 14:46:07.924  INFO 21480 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-04-05 14:46:08.017  INFO 21480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 14:46:08.060 ERROR 21480 --- [restartedMain] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8090]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203) [spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at com.yutian.zhang.rental.Application.main(Application.java:17) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_212]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_212]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_212]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_212]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_212]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	... 19 common frames omitted
+
+2023-04-05 14:46:08.071  INFO 21480 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 14:46:08.085 ERROR 21480 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8090 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8090, or configure this application to listen on another port.
+
+2023-04-05 14:46:08.088  INFO 21480 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-04-05 14:46:08.093  INFO 21480 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-04-05 14:47:00.913  INFO 17984 --- [restartedMain] com.yutian.zhang.rental.Application      : Starting Application on LAPTOP-TMIHG37B with PID 17984 (started by TimZhang in D:\Development\Java\items\Rental Website)
+2023-04-05 14:47:00.915  INFO 17984 --- [restartedMain] com.yutian.zhang.rental.Application      : No active profile set, falling back to default profiles: default
+2023-04-05 14:47:00.987  INFO 17984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-05 14:47:00.987  INFO 17984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-05 14:47:02.112  INFO 17984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8095 (http)
+2023-04-05 14:47:02.128  INFO 17984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 14:47:02.128  INFO 17984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2023-04-05 14:47:02.325  INFO 17984 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-04-05 14:47:02.329  INFO 17984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 14:47:02.329  INFO 17984 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1342 ms
+2023-04-05 14:47:02.440  INFO 17984 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-04-05 14:47:02.574  INFO 17984 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-04-05 14:47:03.557  INFO 17984 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-04-05 14:47:03.619  INFO 17984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 14:47:03.676  INFO 17984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8095 (http) with context path ''
+2023-04-05 14:47:03.679  INFO 17984 --- [restartedMain] com.yutian.zhang.rental.Application      : Started Application in 3.081 seconds (JVM running for 3.868)
+2023-04-05 14:47:03.747  INFO 17984 --- [http-nio-8095-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 14:47:03.747  INFO 17984 --- [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 14:47:03.752  INFO 17984 --- [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-04-05 14:47:05.177  WARN 17984 --- [http-nio-8095-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:47:15.789  WARN 17984 --- [http-nio-8095-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:47:19.371  WARN 17984 --- [http-nio-8095-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:47:21.340  WARN 17984 --- [http-nio-8095-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:47:22.582  WARN 17984 --- [http-nio-8095-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:47:27.589  WARN 17984 --- [http-nio-8095-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:48:20.586  WARN 17984 --- [http-nio-8095-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:48:21.772  WARN 17984 --- [http-nio-8095-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:48:22.853  WARN 17984 --- [http-nio-8095-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:48:28.739  WARN 17984 --- [http-nio-8095-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:48:47.793  WARN 17984 --- [http-nio-8095-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /house/styles/styles.css
+2023-04-05 14:48:47.796  WARN 17984 --- [http-nio-8095-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /house/assets/img/404.png
+2023-04-05 14:48:47.796  WARN 17984 --- [http-nio-8095-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /house/scripts/map.js
+2023-04-05 14:48:48.501  WARN 17984 --- [http-nio-8095-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:51:31.163  WARN 17984 --- [http-nio-8095-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:51:32.155  WARN 17984 --- [http-nio-8095-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:51:32.925  WARN 17984 --- [http-nio-8095-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:52:59.002  WARN 17984 --- [http-nio-8095-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:53:11.481  WARN 17984 --- [http-nio-8095-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:53:13.813  WARN 17984 --- [http-nio-8095-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:53:14.803  WARN 17984 --- [http-nio-8095-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:53:16.552  WARN 17984 --- [http-nio-8095-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:53:30.034  WARN 17984 --- [http-nio-8095-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 14:54:04.879  WARN 17984 --- [http-nio-8095-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 15:06:49.473  WARN 17984 --- [http-nio-8095-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2023-04-05 15:06:50.807  WARN 17984 --- [http-nio-8095-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /house/scripts/map.js
+2023-04-05 15:06:50.807  WARN 17984 --- [http-nio-8095-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /house/styles/styles.css
+2023-04-05 15:06:50.812  WARN 17984 --- [http-nio-8095-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /house/assets/img/404.png
+2023-04-05 15:06:51.338  WARN 17984 --- [http-nio-8095-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico

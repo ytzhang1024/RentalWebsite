@@ -1,0 +1,72 @@
+server:
+  port: 8095
+  forward-headers-strategy: true
+  undertow:
+    io-threads: 2
+    worker-threads: 36
+    buffer-size: 1024
+    directBuffers: true
+  servlet:
+    session:
+      timeout: 86400
+
+spring:
+  transaction:
+    rollback-on-commit-failure: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #MySql Configuration
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/rentsite_db?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: sr990611
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 20MB
+
+
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  typeAliasesPackage: com.yutian.zhang.rental.entity
+  global-config:
+    id-type: 0
+    field-strategy: 2
+    db-column-underline: true
+    refresh-mapper: true
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+
+logging:
+  file: ./logs/log.log
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: error
+#        web:
+#          trace
+
+
+shiro:
+  userNativeSessionManager: true
+
+# Email
+mail:
+  smtp:
+    host: smtp.gmail.com
+    username: waynecheung1024@gmail.com
+    password: llxzuwmnsfbofuwv
+  from:
+    name: House Rental
+
+application:
+  version: 1.0.2
+  staticCdnUrl:
+
+
